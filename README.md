@@ -1,6 +1,6 @@
 # Avito Parser (Community Edition by [@eminsk](https://github.com/eminsk))
 
-[![Release v3.2.28](https://img.shields.io/badge/release-v3.2.28-brightgreen.svg?logo=github)](https://github.com/eminsk/parser_avito/releases/tag/v3.2.28)
+[![Release v3.2.29](https://img.shields.io/badge/release-v3.2.29-brightgreen.svg?logo=github)](https://github.com/eminsk/parser_avito/releases/tag/v3.2.29)
 [![Tests](https://img.shields.io/badge/tests-61%20passed-success.svg)](https://github.com/eminsk/parser_avito/actions)
 [![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
@@ -15,14 +15,14 @@
 Ищете более лёгкую, быструю и полностью независимую альтернативу **без Playwright, без Flet и без стороннего `spfa.pro`**?  
 Попробуйте флагманский проект от **@eminsk** — **[Avito SDK Pro](https://github.com/eminsk/avito-sdk)**:
 - 💻 **Готовый Windows GUI `.exe` (~28 МБ)** на CustomTkinter с живой лентой снайпинга, проверкой прокси/Telegram в 1 клик и экспортом в Excel;
-- 🌐 **Любые прокси:** обычные серверные IPv4, экономные Pay-As-You-Go (AstroProxy, Asocks) и [MobileProxy.space](https://mobileproxy.space/?p=279117);
+- 🌐 **Любые прокси:** обычные серверные IPv4, экономные Pay-As-You-Go (AstroProxy, Asocks) и [MobileProxy (mobileproxy.rent)](https://mobileproxy.rent/?p=279117);
 - ⚡ **Python SDK, CLI и MCP-сервер:** `pip install "avito-sdk[gui]"` для многопоточного парсинга и серверов.
 
 ---
 
 ### 🚀 Быстрый старт (Windows)
 
-1. Скачайте готовый архив из **[Релизов v3.2.28](https://github.com/eminsk/parser_avito/releases/tag/v3.2.28)**: архив `AvitoParser_3.2.28.zip`.
+1. Скачайте готовый архив из **[Релизов v3.2.29](https://github.com/eminsk/parser_avito/releases/tag/v3.2.29)**: архив `AvitoParser_3.2.29.zip`.
 2. Распакуйте архив в любую удобную папку.
 3. Запустите `AvitoParser.exe`.
 4. Вставьте ссылки поиска с Авито, настройте фильтры и нажмите **Старт**.
