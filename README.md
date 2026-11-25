@@ -5,6 +5,7 @@
 [![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
 [![Avito SDK Pro](https://img.shields.io/badge/Avito_SDK_Pro-v0.4.4_GUI_%26_SDK-38bdf8.svg)](https://github.com/eminsk/avito-sdk/releases/latest)
+[![Telegram Канал](https://img.shields.io/badge/Telegram_Канал-@avito__sdk__pro-26A5E4?logo=telegram&logoColor=white)](https://t.me/avito_sdk_pro)
 [![Бесплатный тест прокси 3 часа](https://img.shields.io/badge/Прокси_без_VPN-Тест_3_часа_бесплатно-00C853?logo=cloudflare&logoColor=white)](https://mobileproxy.rent/user.html?free&p=279117)
 
 > **Актуальная поддерживаемая редакция настольного парсера Авито от [@eminsk](https://github.com/eminsk/parser_avito) с графическим интерфейсом (Flet GUI) и фоновым режимом.**  
@@ -101,8 +102,9 @@ python AvitoParser.py
 
 ### 🛠️ Обратная связь и поддержка
 
-Если вы обнаружили ошибку или у вас есть предложение по улучшению программы, создайте обращение:
-👉 **[Создать Issue на GitHub](https://github.com/eminsk/parser_avito/issues)**
+Если вы обнаружили ошибку или у вас есть предложение по улучшению программы, создайте обращение или напишите в сообщество:
+- 📢 **[Telegram-канал и чат @avito_sdk_pro](https://t.me/avito_sdk_pro)** — новые релизы `.exe`, советы по прокси и помощь в комментариях.
+- 👉 **[Создать Issue на GitHub](https://github.com/eminsk/parser_avito/issues)**
 
 При создании Issue укажите:
 1. Вашу операционную систему (Windows, Linux, macOS).
