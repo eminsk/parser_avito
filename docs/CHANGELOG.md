@@ -2,10 +2,14 @@
 
 Все заметные изменения будут документироваться в этом файле. 
 
+### [3.2.28] - 2026-11-24
+#### Исправлено
+- Обновлена актуальная партнёрская ссылка на мобильные 4G/LTE прокси [MobileProxy.space](https://mobileproxy.space/?p=279117) (в интерфейсе `lang.py`, `README.md` и справке `docs/ANTIBLOCK.md`)
+
 ### [3.2.27] - 2026-11-24
 #### Изменено
 - Полностью обновлены ссылки на инфраструктуру форка [@eminsk/parser_avito](https://github.com/eminsk/parser_avito) (README, кнопки в GUI, Docker-манифесты, шаблоны)
-- Удалены устаревшие сторонние реферальные ссылки и кошельки, добавлена актуальная справка по серверным прокси, Pay-As-You-Go (AstroProxy, Asocks) и [MobileProxy.space](https://mobileproxy.space/?p=32111)
+- Удалены устаревшие сторонние реферальные ссылки и кошельки, добавлена актуальная справка по серверным прокси, Pay-As-You-Go (AstroProxy, Asocks) и [MobileProxy.space](https://mobileproxy.space/?p=279117)
 - В шапку интерфейса и документацию добавлен быстрый переход на автономное решение нового поколения — **[Avito SDK Pro](https://github.com/eminsk/avito-sdk)** (без Playwright и `spfa.pro`)
 - Улучшен CI/CD пайплайн сборки релизов: автоматическое формирование описания релиза из `CHANGELOG.md`
 
