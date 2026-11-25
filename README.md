@@ -1,32 +1,40 @@
-# Avito Parser (Community Edition)
+# Avito Parser (Community Edition by [@eminsk](https://github.com/eminsk))
 
-[![Release v3.2.26](https://img.shields.io/badge/release-v3.2.26-brightgreen.svg?logo=github)](https://github.com/eminsk/parser_avito/releases/tag/v3.2.26)
-[![Tests](https://img.shields.io/badge/tests-60%2F60%20passed-success.svg)](https://github.com/eminsk/parser_avito/actions)
+[![Release v3.2.27](https://img.shields.io/badge/release-v3.2.27-brightgreen.svg?logo=github)](https://github.com/eminsk/parser_avito/releases/tag/v3.2.27)
+[![Tests](https://img.shields.io/badge/tests-61%20passed-success.svg)](https://github.com/eminsk/parser_avito/actions)
 [![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
-[![avito-sdk](https://img.shields.io/badge/SDK-avito--sdk-orange.svg)](https://github.com/eminsk/avito-sdk)
+[![Avito SDK Pro](https://img.shields.io/badge/Avito_SDK_Pro-v0.4.3_GUI_%26_SDK-38bdf8.svg)](https://github.com/eminsk/avito-sdk/releases/latest)
 
-> **Актуальная поддерживаемая версия настольного парсера Авито с графическим интерфейсом (GUI) и фоновым режимом.**  
-> Включает все исправления 2026 года: устранение ошибки `curl: (77)`, безопасную авторизацию через аккаунт без зависаний, глубокий сбор характеристик («О помещении» и др.), отслеживание изменения цен и имена продавцов.
+> **Актуальная поддерживаемая редакция настольного парсера Авито от [@eminsk](https://github.com/eminsk/parser_avito) с графическим интерфейсом (Flet GUI) и фоновым режимом.**  
+> Включает все исправления 2026 года: устранение ошибки `curl: (77)`, безопасную авторизацию через аккаунт без зависаний в asyncio, глубокий сбор характеристик («О помещении» и др.), отслеживание изменения цен и имена продавцов.
 
 ---
 
-### ⚡ Нужен высоконагруженный многопоточный парсинг или Telegram-бот?
-Для масштабного сбора данных без ограничений GUI, работы на серверах, в Docker и микросервисах используйте специализированную библиотеку **[avito-sdk](https://github.com/eminsk/avito-sdk)** с поддержкой **Mobile Proxy Auto-Rotation** (автоматической ротацией IP мобильных прокси через API смены IP).
+### 🚀 Вышло новое автономное приложение — [Avito SDK Pro](https://github.com/eminsk/avito-sdk/releases/latest)
+Ищете более лёгкую, быструю и полностью независимую альтернативу **без Playwright, без Flet и без стороннего `spfa.pro`**?  
+Попробуйте флагманский проект от **@eminsk** — **[Avito SDK Pro](https://github.com/eminsk/avito-sdk)**:
+- 💻 **Готовый Windows GUI `.exe` (~28 МБ)** на CustomTkinter с живой лентой снайпинга, проверкой прокси/Telegram в 1 клик и экспортом в Excel;
+- 🌐 **Любые прокси:** обычные серверные IPv4, экономные Pay-As-You-Go (AstroProxy, Asocks) и [MobileProxy.space](https://mobileproxy.space/?p=32111);
+- ⚡ **Python SDK, CLI и MCP-сервер:** `pip install "avito-sdk[gui]"` для многопоточного парсинга и серверов.
 
 ---
 
 ### 🚀 Быстрый старт (Windows)
 
-1. Скачайте готовый архив из **[Релизов v3.2.26](https://github.com/eminsk/parser_avito/releases/tag/v3.2.26)**: архив `AvitoParser_3.2.26.zip`.
+1. Скачайте готовый архив из **[Релизов v3.2.27](https://github.com/eminsk/parser_avito/releases/tag/v3.2.27)**: архив `AvitoParser_3.2.27.zip`.
 2. Распакуйте архив в любую удобную папку.
 3. Запустите `AvitoParser.exe`.
 4. Вставьте ссылки поиска с Авито, настройте фильтры и нажмите **Старт**.
 
 ---
 
-### 🌟 Что нового в версиях 3.2.24 – 3.2.26
+### 🌟 Что нового в версиях 3.2.24 – 3.2.27
 
+* **Версия 3.2.27 (24.11.2026)**:
+  - Все ссылки UI, Docker-образов (`ghcr.io/eminsk/parser_avito`) и документации полностью переведены на актуальный репозиторий [@eminsk/parser_avito](https://github.com/eminsk/parser_avito);
+  - Удалены устаревшие сторонние реферальные ссылки; добавлено актуальное руководство по бюджетным серверным и Pay-As-You-Go мобильным прокси;
+  - Настроена автоматическая генерация подробных примечаний к релизам из `CHANGELOG.md`.
 * **Версия 3.2.26 (17.11.2026)**:
   - Устранена ошибка `Playwright Sync API inside the asyncio loop` при попытке входа в аккаунт через Flet UI;
   - Устранен критический баг бесконечного дублирования окон парсера в PyInstaller `.exe` (вызов Playwright теперь идёт через встроенный Node.js драйвер, а не через `sys.executable`);

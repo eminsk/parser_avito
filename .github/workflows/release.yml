@@ -88,6 +88,29 @@ jobs:
           $version = "${{ steps.version.outputs.version }}"
           Compress-Archive -Path dist\AvitoParser.exe, config.toml -DestinationPath dist\AvitoParser_$version.zip
 
+      - name: Generate release notes
+        id: notes
+        shell: pwsh
+        run: |
+          $version = "${{ steps.version.outputs.version }}"
+          $changelog = Get-Content docs/CHANGELOG.md -Raw -Encoding UTF8
+          $pattern = "(?ms)^### \[$([regex]::Escape($version))\].*?(?=^### \[|\z)"
+          $section = if ($changelog -match $pattern) { $matches[0].Trim() } else { "Автоматическая сборка версии **$version**." }
+          $lines = @(
+            "## Avito Parser v$version — Community Edition (by @eminsk)",
+            "",
+            $section,
+            "",
+            "---",
+            '> 💡 Нужен быстрый автономный мониторинг без браузера и стороннего `spfa.pro`?  ',
+            '> Попробуйте **[Avito SDK Pro](https://github.com/eminsk/avito-sdk/releases/latest)** (`CustomTkinter` GUI + Python SDK + MCP).',
+            "",
+            '🐛 **Баги и предложения:** https://github.com/eminsk/parser_avito/issues'
+          )
+          $notes = $lines -join "`n"
+          New-Item -ItemType Directory -Force -Path dist | Out-Null
+          Set-Content -Path dist/release_notes.md -Value $notes -Encoding UTF8
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
@@ -98,9 +121,8 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ steps.version.outputs.version }}
-          name: Release ${{ steps.version.outputs.version }}
-          body: |
-            Автоматическая сборка версии **${{ steps.version.outputs.version }}**
+          name: Release ${{ steps.version.outputs.version }} (by @eminsk)
+          body_path: dist/release_notes.md
           files: dist/AvitoParser_${{ steps.version.outputs.version }}.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

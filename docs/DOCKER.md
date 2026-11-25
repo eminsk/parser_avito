@@ -41,9 +41,8 @@ docker-compose up -d
 
 https://github.com/containers/podman-compose/issues/1275
 
-### VPS
-💡 Подходящий VPS по адекватной цене можно арендовать здесь: [beget](https://beget.com/p2175639)
+### Сервер (VPS)
 
+Для круглосуточной работы в Docker подойдёт любой недорогой VPS с Ubuntu/Debian (от 1–2 ГБ RAM при включённом `use_webdriver = false` в `config.toml`).
 
-🎥 Видео с разбором покупки сервера, первичной настройки и запуска парсера:
-https://youtu.be/_XQW2ApNwiQ
+> 💡 Если вы разворачиваете парсер на сервере без графического интерфейса и не хотите тянуть тяжёлый образ с Playwright/Chromium, используйте лёгкую библиотеку **[avito-sdk](https://github.com/eminsk/avito-sdk)** (`pip install avito-sdk`).
