@@ -5,6 +5,7 @@
 [![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
 [![Avito SDK Pro](https://img.shields.io/badge/Avito_SDK_Pro-v0.4.4_GUI_%26_SDK-38bdf8.svg)](https://github.com/eminsk/avito-sdk/releases/latest)
+[![Бесплатный тест прокси 3 часа](https://img.shields.io/badge/Прокси_без_VPN-Тест_3_часа_бесплатно-00C853?logo=cloudflare&logoColor=white)](https://mobileproxy.rent/user.html?free&p=279117)
 
 > **Актуальная поддерживаемая редакция настольного парсера Авито от [@eminsk](https://github.com/eminsk/parser_avito) с графическим интерфейсом (Flet GUI) и фоновым режимом.**  
 > Включает все исправления 2026 года: устранение ошибки `curl: (77)`, безопасную авторизацию через аккаунт без зависаний в asyncio, глубокий сбор характеристик («О помещении» и др.), отслеживание изменения цен и имена продавцов.

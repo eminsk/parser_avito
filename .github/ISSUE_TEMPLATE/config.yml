@@ -1,1 +1,11 @@
 blank_issues_enabled: false
+contact_links:
+  - name: "🎁 Ошибка 429 / 403? Бесплатный тест мобильного прокси 3 часа (без VPN в РФ)"
+    url: "https://mobileproxy.rent/user.html?free&p=279117"
+    about: "Авито блокирует домашние и датацентр-IP по 429/403. Возьмите бесплатный 3-часовой тест 4G/LTE прокси (работает в РФ без VPN)."
+  - name: "🚀 Лёгкая альтернатива без Playwright — Avito SDK Pro v0.4.4 (~28 МБ)"
+    url: "https://github.com/eminsk/avito-sdk/releases/latest"
+    about: "Автономный .exe с встроенным Chrome TLS (curl_cffi), живой лентой и трекером снижения цен."
+  - name: "📖 Справка по настройке прокси и обходу блокировок"
+    url: "https://github.com/eminsk/parser_avito/blob/master/docs/ANTIBLOCK.md"
+    about: "Пошаговая инструкция по серверным прокси, spfa.pro, AstroProxy и MobileProxy."
