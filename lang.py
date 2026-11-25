@@ -60,7 +60,10 @@ PROXY_PANEL_HELP = (
     "• Только для быстрой проверки работоспособности — быстро упирается в лимиты Avito\n\n"
 
     "💡 Совет: Если нужен лёгкий автономный мониторинг с готовым GUI без Playwright и сторонних сервисов, "
-    "попробуйте Avito SDK Pro: https://github.com/eminsk/avito-sdk"
+    "попробуйте Avito SDK Pro: https://github.com/eminsk/avito-sdk\n\n"
+    "🎁 Бесплатный 3-часовой тест мобильного прокси (работает в РФ без VPN): "
+    "https://mobileproxy.rent/user.html?free&p=279117\n"
+    "📢 Релизы, решения 429/403 и чат поддержки в Telegram: https://t.me/avito_sdk_pro"
 )
 
 UNSUPPORT_PROXY = "Такой прокси не поддерживается. Проверьте формат: login:pass@host:port или настройте вручную через config.toml и parser_cls.py"
@@ -70,6 +73,9 @@ SPFA_PROXY_REQUIRED = (
     "запросами и повторными проверками."
 )
 PROXY_LINK = "https://mobileproxy.rent/?p=279117"
+PROXY_FREE_TRIAL_LINK = "https://mobileproxy.rent/user.html?free&p=279117"
+TELEGRAM_CHANNEL_LINK = "https://t.me/avito_sdk_pro"
+TELEGRAM_BTN_HELP = "Официальный Telegram-канал релизов, гайдов по прокси и чат поддержки"
 SPFA_LINK = "https://spfa.pro/"
 TG_TEST_MSG = "Если сообщение пришло к Вам в telegram - значит всё настроено правильно. Если нет - результат парсинга" \
               " всегда можно посмотреть в папке result или ниже. Если Вы сейчас измените token или chat_id -" \

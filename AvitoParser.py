@@ -202,6 +202,10 @@ def main(page: ft.Page):
         except Exception as err:
             logger.error(f"Ошибка при проверке VK: {err}")
 
+    def _open_url_button(label: str, url: str) -> ft.TextButton:
+        """Create a dialog action button opening ``url`` in browser."""
+        return ft.TextButton(label, on_click=lambda e, target=url: page.launch_url(target))
+
     dlg_modal_proxy = ft.AlertDialog(
         modal=True,
         title=ft.Text("Помощь по разделу:"),
@@ -212,14 +216,11 @@ def main(page: ft.Page):
             padding=10
         ),
         actions=[
-            ft.TextButton("Купить прокси",
-                          on_click=lambda e: page.launch_url(
-                              PROXY_LINK)),
-            ft.TextButton("Зарегистрироваться на spfa.pro",
-                          on_click=lambda e: page.launch_url(
-                              SPFA_LINK)),
+            _open_url_button("🎁 Тест прокси 3ч бесплатно", PROXY_FREE_TRIAL_LINK),
+            _open_url_button("Купить прокси", PROXY_LINK),
+            _open_url_button("Зарегистрироваться на spfa.pro", SPFA_LINK),
+            _open_url_button("📢 Помощь в Telegram", TELEGRAM_CHANNEL_LINK),
             ft.TextButton("Отмена", on_click=close_dlg),
-
         ],
         actions_alignment=ft.MainAxisAlignment.END,
     )
@@ -561,6 +562,10 @@ def main(page: ft.Page):
                                      on_click=lambda e: page.launch_url(SDK_LINK),
                                      style=ft.ButtonStyle(color=ft.colors.CYAN_300), expand=True,
                                      tooltip=BUY_ME_COFFE_BTN_HELP)
+    tg_channel_btn = ft.TextButton("📢 Telegram-канал (@avito_sdk_pro)",
+                                   on_click=lambda e: page.launch_url(TELEGRAM_CHANNEL_LINK),
+                                   style=ft.ButtonStyle(color=ft.colors.LIGHT_BLUE_300), expand=True,
+                                   tooltip=TELEGRAM_BTN_HELP)
     report_issue_btn = ft.TextButton("Сообщить о проблеме", on_click=lambda e: page.launch_url(
         ISSUES_LINK), style=ft.ButtonStyle(color=ft.colors.GREY), expand=True,
                                      tooltip=REPORT_ISSUE_BTN_HELP)
@@ -749,7 +754,7 @@ def main(page: ft.Page):
 
 
     other_btn = ft.Row(
-        [buy_me_coffe_btn, report_issue_btn],
+        [buy_me_coffe_btn, tg_channel_btn, report_issue_btn],
         alignment=ft.MainAxisAlignment.CENTER
     )
 
